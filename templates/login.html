@@ -1,0 +1,22 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Login</h1>
+
+<form action="" method="POST">
+    <dl>
+
+      <label>username</label>
+       <input type="text" name="username" class="form-control" value={{request.form.username}}>
+
+
+
+      <label>password</label>
+       <input type="password" name="password" class="form-control" value={{request.form.password}}>
+
+
+    <button type="submit" class="btb btn-primary">submit</button>
+    </dl>
+
+</form>
+{% endblock %}

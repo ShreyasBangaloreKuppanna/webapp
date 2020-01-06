@@ -1,0 +1,22 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+<h1>ticket </h1>
+
+<form action="" method="POST">
+    <dl>
+
+      <label>problem</label>
+       <input type="text" name="problem" class="form-control" value={{request.form.problem}}>
+
+
+
+      <label>device</label>
+       <input type="text" name="device" class="form-control" value={{request.form.device}}>
+
+
+    <button type="submit" class="btb btn-primary">submit</button>
+    </dl>
+
+</form>
+{% endblock %}

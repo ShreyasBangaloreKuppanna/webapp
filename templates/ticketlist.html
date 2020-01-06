@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1> Ticket list</h1>
+<hr>
+<table class="table table-striped">
+    <tr>
+        <th>ticket number</th>
+        <th>device</th>
+        <th>problem</th>
+        <th>date and time created</th>
+
+    </tr>
+    {% for ticket in tickets %}
+    <tr>
+        <td>{{ticket[2]}}</td>
+        <td>{{ticket[1]}}</td>
+        <td>{{ticket[0]}}</td>
+        <td>{{ticket[3]}}</td>
+        <td><a input type="button" value="open popup" onclick="window.open( '/editticket/{{ticket[2]}}','ticket','height=900,width=900,top=1000,left=1000' )">edit</a></td>
+        <td><a type='button' href="#" class="btn btn-danger">delete</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
